@@ -44,24 +44,17 @@ const RootHeader = () => {
                 <input
                   type="text"
                   placeholder="Search for Category, Brand, Name"
-                  className="w-full px-3 h-10 rounded-l border-2 border-secondary focus:outline-none focus:border-secondary pr-10"
+                  className="w-full px-3 py-[6px] rounded-l border-2 border-[#E10101] focus:outline-none focus:border-[#E10101] pr-10"
                
                 />
-
-
-      
                   <button
                     type="button"
-                  
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
                   >
-                    <IoMdCloseCircleOutline className="text-secondary h-[20px] w-[20px]" />
+                    <IoMdCloseCircleOutline className="text-slate-300 h-[20px] w-[20px]" />
                   </button>
-            
-
               </div>
-
-              <button type="submit" className="bg-secondary text-white rounded-r px-3 md:px-4 py-1 md:py-2">
+              <button type="submit" className="bg-[#E10101] text-white rounded-r px-3 md:px-4 py-1 md:py-2">
                 Search
               </button>
             </div>
