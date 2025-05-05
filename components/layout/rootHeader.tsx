@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
+import { FaUserAlt } from 'react-icons/fa';
+import { LuUser } from 'react-icons/lu';
+import { GoSearch } from 'react-icons/go';
 
 const RootHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,10 +20,10 @@ const RootHeader = () => {
       </div>
 
       {/* Main Header */}
-      <div className="max-w-full py-3 md:py-5 px-4 md:px-16 ">
+      <div className="max-w-full py-2 md:py-5 px-4 md:px-16 ">
         <div className="flex justify-between items-center">
-            {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10 text-lg">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-4 text-md">
             <a href="#" >Home</a>
             <a href="#services" >Services</a>
             <a href="#about" >About Us</a>
@@ -33,35 +36,37 @@ const RootHeader = () => {
             </Link>
           </div>
 
-          
+
 
           {/* Get in Touch Button */}
           <div className="hidden md:flex space-x-10 text-lg">
-          <div className="flex justify-start">
-          <form className="flex flex-col md:flex-row gap-3" >
-            <div className="flex items-center">
-              <div className="relative w-full md:w-80">
-                <input
-                  type="text"
-                  placeholder="Search for Category, Brand, Name"
-                  className="w-full px-3 py-[6px] rounded-l border-2 border-[#E10101] focus:outline-none focus:border-[#E10101] pr-10"
-               
-                />
-                  <button
-                    type="button"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
-                  >
-                    <IoMdCloseCircleOutline className="text-slate-300 h-[20px] w-[20px]" />
-                  </button>
-              </div>
-              <button type="submit" className="bg-[#E10101] text-white rounded-r px-3 md:px-4 py-1 md:py-2">
-                Search
-              </button>
-            </div>
+            <div className="flex justify-start">
+              <form className="flex flex-col md:flex-row gap-3" >
+                <div className="flex items-center">
+                  <div className="relative w-full md:w-80">
+                    <input
+                      type="text"
+                      placeholder="Search for Category, Brand"
+                      className="w-full px-3 py-[6px] rounded-l border-2 border-[#E10101] focus:outline-none focus:border-[#E10101] pr-10"
 
-          </form>
-        </div>
-            <a href="#contact" className="hover:text-gray-300 transition-all">Contact</a>
+                    />
+                    <button
+                      type="button"
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
+                    >
+                      <IoMdCloseCircleOutline className="text-slate-300 h-[20px] w-[20px]" />
+                    </button>
+                  </div>
+                  <button type="submit" className="bg-[#E10101] text-white rounded-r px-3 md:px-4 py-1 md:py-[10px] cursor-pointer">
+                  <GoSearch className='h-6 w-6'/>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+            <p className='pt-2 '>
+              <LuUser className='h-10 w-10 bg-white rounded-full p-2 cursor-pointer' />
+            </p>
           </div>
 
           {/* Mobile Menu Toggle */}
